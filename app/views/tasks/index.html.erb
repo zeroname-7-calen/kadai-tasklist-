@@ -1,5 +1,5 @@
 <h1>タスクリスト</h1>
-
+<p>ここはviews/tasks/index.html.erb</p>
 <% if @tasks.any? %>
   <table class="table table-striped">
     <thead>
@@ -7,20 +7,21 @@
         <th>id</th>
         <th>ステータス</th>
         <th>タスク</th>
-      </tr>
+        </tr>
      </thead>
     <tbody>
-      <% @tasks.each do |task|%>
-      <tr>
-        <td><%= link_to task.id, task %></td>
-        <td><%= task.status %></td>
-        <td><%= task.content %></td>
-      </tr>
-    <% end %>
-  </tbody>
+　　　　　<% @tasks.each do |task|%>
+            <tr>
+                <td><%= link_to task.id, task %></td>
+                <td><%= task.status %></td>
+                <td><%= task.content %></td>
+            </tr>
+          <% end %>
+    </tbody>
  </table>
  <div>
   <%= paginate @tasks %>
+  
  </div>
   <% end %>
   
